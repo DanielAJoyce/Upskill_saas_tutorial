@@ -47,6 +47,10 @@ font-family:'Dosis', sans-serif;
     color:white;
 }
 
+.alert-notice{
+    display:none;
+}
+
 .navbar-default .navbar-toggle{
     border:2px solid white;
     &:hover, &:focus{
