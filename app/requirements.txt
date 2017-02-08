@@ -6,7 +6,8 @@ pro should like to pro sign up form
 
 
 Stripe Integration
-Users should have a stripe customer token in the users table
+Users should have a stripe customer token in the users table (done)
+
 Javascript should prevent Pro form from submitting, when user fills it out,
 and should send card info to Stripe. Stripe will return with a card token
 
