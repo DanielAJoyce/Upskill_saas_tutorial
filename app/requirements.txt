@@ -27,3 +27,4 @@ Rails should save customer token and user information to our database.
 * User should be able to view their own profile
 * User profile should have a profile picture
 * User should be able to view all user profiles (Basic -> Limited, Pro -> Unlimited)
+a
