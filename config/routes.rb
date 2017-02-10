@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :users do
     resource :profile  
   end
-  
   get 'about', to:'pages#about'
   resources :contacts, only: :create
   get 'contact-us', to: 'contacts#new'
