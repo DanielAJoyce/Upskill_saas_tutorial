@@ -1,4 +1,8 @@
 class ProfilesController < ApplicationController
+    
+    before_action :authenticate_user!
+    before_action :only_current_user
+    
     # GET to /users/:user_id/profile/new 
     def new
     #When this happens, render blank profile details form.
@@ -47,5 +51,12 @@ class ProfilesController < ApplicationController
         def profile_params
             #whitelist form fields.
            params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :phone_number, :contact_email, :description)
+        end
+        
+        def only_current_user
+           @user = User.find(params[:user_id]) 
+           
+           #redirect to home page unless it's the current user.
+           redirect_to (root_url) unless @user == current_user
         end
 end
