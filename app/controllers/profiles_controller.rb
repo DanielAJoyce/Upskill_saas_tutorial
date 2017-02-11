@@ -10,7 +10,7 @@ class ProfilesController < ApplicationController
         #Ensure user who fills out form
        @user = User.find(params[:user_id])
        #Create profile linked to this user.
-       @profile = @user.build_profile(profile_params ) 
+       @profile = @user.build_profile(profile_params ) # pre-fills user_id via "Build_profile" 
       if @profile.save
           flash[:success] = "Profile Updated!"
           redirect_to root_path
